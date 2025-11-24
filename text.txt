@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffb3ba, #bae1ff); /* Cute pastel gradient */
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px; /* Subtle heart-like dots */
+            pointer-events: none;
+        }
+        .confession {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for contrast */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 400px;
+            position: relative;
+            z-index: 1;
+        }
+        .message {
+            font-size: 18px;
+            color: #333;
+        }
+        .emoji {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="confession">
+        <h2>Confession Code</h2>
+        <p class="message">hi chaii can i confess my feelings???? I really2 like you po. I like the way you chat to me, yap with me and sending meme everyday, and your really cute yun lang po. Kung waa koy chance im willing to wait po<span class="emoji">🥰</span></p>
+    </div>
+</body>
+</html>
