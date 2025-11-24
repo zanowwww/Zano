@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crush Confession</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fecfef);
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 { color: #d63384; }
+        input, textarea { margin: 10px; padding: 10px; width: 300px; border-radius: 5px; border: 1px solid #ccc; }
+        button { background: #d63384; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #b02a5e; }
+        #confession { margin-top: 20px; font-size: 1.2em; display: none; }
+    </style>
+</head>
+<body>
+    <h1>Confess Your Crush</h1>
+    <p>Enter their name and your heartfelt message below.</p>
+    <input type="text" id="crushName" placeholder="Crush's Name">
+    <br>
+    <textarea id="message" rows="4" placeholder="Your confession message..."></textarea>
+    <br>
+    <button onclick="confess()">Confess!</button>
+    <div id="confession"></div>
+
+    <script>
+        function confess() {
+            const name = document.getElementById('crushName').value.trim();
+            const msg = document.getElementById('message').value.trim();
+            const output = document.getElementById('confession');
+            
+            if (!name || !msg) {
+                output.innerHTML = "<p style='color: red;'>Please fill in both fields!</p>";
+                output.style.display = "block";
+                return;
+            }
+            
+            output.innerHTML = `<p>Dear ${name},<br>${msg}<br>With love, [Your Name]</p>`;
+            output.style.display = "block";
+        }
+    </script>
+</body>
+</html>
